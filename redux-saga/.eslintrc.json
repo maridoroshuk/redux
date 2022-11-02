@@ -1,0 +1,32 @@
+{
+  "extends": "airbnb",
+
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@", "./src"],
+          ["~", "./src/js"]
+        ],
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  },
+
+  "env": {
+    "browser": true,
+    "node": true
+  },
+
+  "globals": {
+    "cy": false,
+    "Cypress": false,
+    "describe": false,
+    "context": false,
+    "beforeEach": false,
+    "afterEach": false,
+    "it": false,
+    "assert": false,
+    "expect": false
+  }
+}
