@@ -1,4 +1,4 @@
-export default async function fetchData() {
+export default async function fetchDogData() {
   const data = await fetch(
     'https://dog.ceo/api/breeds/image/random',
   );
