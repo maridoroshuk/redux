@@ -17,11 +17,12 @@ code {
   text-align: center;
 }
 
-.container button {
-  margin: 0 1rem;
+.container select {
+  margin: 0.5rem;
 }
 
 .container img {
-  width: 30rem;
+  width: 90%;
+  max-width: 40rem;
   margin: 1rem auto;
 }

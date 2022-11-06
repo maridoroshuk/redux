@@ -5,7 +5,7 @@ import {
 } from 'store/reducers/breedsSlice';
 import { fetchBreedData } from '../api/fetchBreedsData';
 
-function* dogSagaWorker(action) {
+function* breedsSagaWorker(action) {
   try {
     const data = yield call(fetchBreedData);
     yield put(setBreeds({data: Object.keys(data)}));
@@ -14,6 +14,6 @@ function* dogSagaWorker(action) {
   }
 }
 
-export function* dogSagaWatcher() {
-  yield takeLatest(getBreeds.type, dogSagaWorker);
+export function* breedsSagaWatcher() {
+  yield takeLatest(getBreeds.type, breedsSagaWorker);
 }

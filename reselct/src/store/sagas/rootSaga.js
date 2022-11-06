@@ -1,8 +1,10 @@
 import { fork } from 'redux-saga/effects';
-import { dogSagaWatcher } from './handlers/dog';
+import { breedsSagaWatcher } from './handlers/breed';
+import { imagesSagaWatcher } from './handlers/dogImages';
 
 function* rootSaga() {
-  yield fork(dogSagaWatcher);
+  yield fork(breedsSagaWatcher);
+  yield fork(imagesSagaWatcher)
 }
 
 export default rootSaga;

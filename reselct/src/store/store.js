@@ -4,6 +4,7 @@ import {
   getDefaultMiddleware,
 } from '@reduxjs/toolkit';
 import breedsReducer from './reducers/breedsSlice';
+import imageReducer from './reducers/imageSlice';
 import createSagaMiddleware from 'redux-saga';
 import rootSaga from './sagas/rootSaga';
 
@@ -11,6 +12,7 @@ const sagaMiddleware = createSagaMiddleware();
 
 const reducer = combineReducers({
   breeds: breedsReducer,
+  dogImages: imageReducer
 });
 
 const store = configureStore({
