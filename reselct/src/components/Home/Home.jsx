@@ -34,13 +34,15 @@ function Home() {
 
   return (
     <div className="container">
+      <h1>Get a random dog image by breed</h1>
         <BreedOptions
           breeds={breeds}
           onBreedSelect={(breed) =>
             handleBreedSelect(breed)
           }
         />
-      <DogImage source={imageUrl} breed={selectedBreed} />
+        {imageUrl && <DogImage source={imageUrl} breed={selectedBreed} />}
+
     </div>
   );
 }
