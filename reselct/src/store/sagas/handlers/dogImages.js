@@ -14,7 +14,6 @@ function* imagesSagaWorker(action) {
   }
 }
 
-
 export function* imagesSagaWatcher() {
   yield takeLatest(getDogImage.type, imagesSagaWorker);
 }
