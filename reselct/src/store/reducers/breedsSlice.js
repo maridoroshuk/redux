@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   breeds: [],
-  selectedBreed: '',
+  selectedBreed: null,
 };
 
 const breedsSlice = createSlice({
@@ -11,10 +11,17 @@ const breedsSlice = createSlice({
   reducers: {
     getBreeds: () => {},
     setBreeds: (state, action) => {
-      return {...state, breeds: action.payload.data, selectedBreed:action.payload.data[0]}
+      return {
+        ...state,
+        breeds: action.payload.data,
+        selectedBreed: action.payload.data[0],
+      };
     },
     selectBreed: (state, action) => {
-      return {...state, selectedBreed: action.payload.breed}
+      return {
+        ...state,
+        selectedBreed: action.payload.breed,
+      };
     },
   },
 });

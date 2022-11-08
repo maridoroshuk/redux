@@ -27,6 +27,8 @@ const rootReducer = combineReducers({
 const persistConfig = {
   key: 'root',
   storage,
+  whiteList: ['breeds', 'breeds.selectedBreed'],
+  rootReducer,
 };
 
 const persistedReducer = persistReducer(
